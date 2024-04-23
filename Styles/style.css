@@ -1,0 +1,78 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+* body .container {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 230, 0);
+}
+* body .container .card {
+  background: white;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 20px;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+* body .container .card h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3vw;
+}
+* body .container .card .input-box {
+  align-self: flex-start;
+  width: 100%;
+}
+* body .container .card .input-box label {
+  display: block;
+  font-size: 1vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+* body .container .card .input-box input {
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid black;
+  padding: 20px 1vw;
+  font-size: 1.5rem;
+  width: 80%;
+  margin-top: 5px;
+}
+* body .container .card .countries {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+* body .container .card .countries p {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+* body .container .card .countries .from,
+* body .container .card .countries .to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 5px;
+}
+* body .container .card .conversion-value {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+* body .container .card button {
+  background: purple;
+  color: white;
+  border-radius: 55px;
+  padding: 20px 2vw;
+  font-size: 2vw;
+}/*# sourceMappingURL=style.css.map */
