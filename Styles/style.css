@@ -3,47 +3,56 @@
   margin: 0px;
   box-sizing: border-box;
 }
+
 * body .container {
   width: 100svw;
-  height: 100svh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(255, 230, 0);
+  background: #ffe600;
+  padding-block: 20px;
 }
+
 * body .container .card {
   background: white;
   box-shadow: 5px 5px 10px black;
   border-radius: 20px;
-  padding: 50px 50px;
+  padding: 20px clamp(5px, 5vw, 100rem);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
+  gap: clamp(10px, 7vw, 30px);
 }
+
 * body .container .card h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3vw;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.5rem, 3vw, 10rem);
+  text-align: center;
 }
+
 * body .container .card .input-box {
   align-self: flex-start;
   width: 100%;
 }
+
 * body .container .card .input-box label {
   display: block;
-  font-size: 1vw;
+  font-size: clamp(1rem, 2vw, 10rem);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 * body .container .card .input-box input {
   border-radius: 5px;
   outline: none;
   border: 2px solid black;
-  padding: 20px 1vw;
+  padding: 20px clamp(10px, 1vw, 10rem);
   font-size: 1.5rem;
-  width: 80%;
+  width: 100%;
   margin-top: 5px;
 }
+
 * body .container .card .countries {
   width: 100%;
   display: flex;
@@ -51,11 +60,13 @@
   align-items: center;
   justify-content: space-between;
 }
+
 * body .container .card .countries p {
   font-weight: bold;
   font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
+
 * body .container .card .countries .from,
 * body .container .card .countries .to {
   display: flex;
@@ -64,15 +75,27 @@
   align-items: center;
   gap: 5px;
 }
+
 * body .container .card .conversion-value {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
 }
+
 * body .container .card button {
   background: purple;
   color: white;
   border-radius: 55px;
-  padding: 20px 2vw;
-  font-size: 2vw;
-}/*# sourceMappingURL=style.css.map */
+  padding: 10px 2vw;
+  font-size: clamp(1.25rem, 2vw, 10rem);
+}
+
+@media (max-width: 370px) {
+  .container {
+    padding-inline: 15px;
+  }
+  .from, .to {
+    flex-direction: column;
+  }
+}
